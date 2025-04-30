@@ -14,9 +14,10 @@ for line in release_lines:
     if line[:2] == "* ":
         rest_of_line = line[2:]
         title, author, uri = parse_line(rest_of_line)
-        new_line = f"* [{title}]({uri}) by @{author}"
+        new_authorless_line = f"* [{title}]({uri})"
+        new_line = f"{new_authorless_line} by @{author}"
         if "@renovate" in line:
-            renovate.append(new_line)
+            renovate.append(new_authorless_line)
         else:
             normal.append(new_line)
     else:
