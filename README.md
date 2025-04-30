@@ -1,0 +1,1 @@
+Copy release details from github, paste into release.txt, copy terminal output into github, get nicely formatted list.
