@@ -27,7 +27,7 @@ for line in normal:
     print (line)
 
 print ("#### Renovate")
-for line in renovate:
+for line in sorted(renovate):
     print (line)
 
     
